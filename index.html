@@ -1,0 +1,258 @@
+<!doctype html>
+<html>
+<head>
+	<title>평등하게 1/n - 평균의 균열Crack the Average</title>
+
+	<!-- meta tag, favicon -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico">
+
+	<!-- jQuery / jQuery UI 가져오기. -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	<script type="text/javascript" src="js/plugins/jquery-3.3.1.min.js"> </script>
+
+	<!-- D3.js 가져오기. -->
+	<!-- <script src="https://d3js.org/d3.v4.js"></script> -->
+	<!-- <script src="https://d3js.org/d3-format.v1.min.js"></script> -->
+	<script type="text/javascript" src="js/plugins/d3-format.v1.min.js"> </script>
+
+	<!-- local Javascript plugin 가져오기. -->
+	<!-- <script type="text/javascript" src="js/plugins/jquery.easing.1.3.js"> </script> -->
+	<!-- <script type="text/javascript" src="js/plugins/countUp.js"> </script> -->
+	<!-- <link rel="stylesheet" type="text/css" href="js/plugins/d3-slider-master/d3.slider.css"/>
+	<script type="text/javascript" src="js/plugins/d3-slider-master/d3.slider.js"> </script> -->
+
+	<!-- importing webFonts -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css"> -->
+	<!-- <link rel='stylesheet' type='text/css' href='https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css'> -->
+
+	<!-- local json/css -->
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+	<script type="text/javascript" src="@json_data/data.js"></script>
+	<script type="text/javascript" src="@json_data/displayingForm.js"></script>
+</head>
+
+
+
+<body>
+	<div id="square_background">
+
+		<div id="grdpBox_cover">
+			<div id="grand_capital" class="grand_province">
+				<div id="seoul" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="incheon" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="gyeong-gi" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div id="grand_gangwon" class="grand_province">
+				<div id="gang-won" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div id="grand_chungcheong" class="grand_province">
+				<div id="daejeon" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="sejong" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="chungbuk" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="chungnam" class="grdpBox heightOnRight">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div id="grand_jeolla" class="grand_province">
+				<div id="gwangju" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="jeonbuk" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="jeon-nam" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div id="grand_TK" class="grand_province">
+				<div id="daegu" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="gyeongbuk" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div id="grand_PK" class="grand_province">
+				<div id="busan" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="ulsan" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+				<div id="gyeongnam" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+			</div>
+
+			<div id="grand_jeju" class="grand_province">
+				<div id="jeju" class="grdpBox heightOnLeft">
+					<div class="horizontalBar" style="display: none;">
+						<div class="horizontalBar_upper"></div>
+						<div class="horizontalBar_lower"></div>
+					</div>
+					<div class="number_n" style="display: none;"></div>
+				</div>
+			</div>
+		</div>
+
+		<div id="verticalBar_cover">
+			<div class="verticalBar_grand_province">
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+			</div>
+			<div class="verticalBar_grand_province">
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+			</div>
+			<div class="verticalBar_grand_province">
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+				<div class="verticalBar heightOnRight" style="display: none;"></div>
+			</div>
+			<div class="verticalBar_grand_province">
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+			</div>
+			<div class="verticalBar_grand_province">
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+			</div>
+			<div class="verticalBar_grand_province">
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+			</div>
+			<div class="verticalBar_grand_province">
+				<div class="verticalBar heightOnLeft" style="display: none;"></div>
+			</div>
+		</div>
+		<div id="number_grdpPerUnit"></div>
+
+
+		<div id="horizontalBar_total" class="horizontalBar">
+			<div class="horizontalBar_upper"></div>
+			<div class="horizontalBar_lower"></div>
+		</div>
+		<div id="number_n_total" class="number_n"></div>
+
+	</div>
+
+
+	<div id="headerMenu">
+		<div id="sentence">
+			<div id="quote">&#8220;모든 <highlight>땡땡땡</highlight>은(는) </br> 모든 뾱뾱뾱이다.&#8221;</div>
+			<div id="staticsName"></div>
+			<div id="grdp_button">처음으로 돌아가기</div>
+		</div>
+
+		<div id="menuIcon_container"><!-- 
+			<div class="menuIcon">사람</div>
+			<div class="menuIcon">땅</div> -->
+		</div>
+
+	</div>
+
+
+	<footer>
+		<div id="credit">
+			<div id="staticsCredit"></div>
+			<div id="grdpCredit"><b>²</b> 통계청, 지역소득, <a href="http://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1C61&conn_path=I2" target="_blank">행정구역(시도)별/경제활동별 지역내총생산(2016)</a>. 단, 세종시의 지역내총생산이 충북·충남에 합쳐 집계되어, 세종·충북·충남은 <a href="http://www.sejong.go.kr/cop/bbs/BBSMSTR_000000001792/selectBoardArticle.do?nttId=60362" target="_blank">&#8220;세종 월간 경제동향&#8221;(세종특별자치시 일자리정책과, 2016-12호)</a>에 실린 잠정치를 바탕으로 계산.<br>지역내총생산: 어떤기간 동안 어떠한 지역에서 생산된 상품과 서비스의 가치를 시장가격으로 평가한 수치. 국가 단위로 계산할 경우, 이를 국내총생산GDP이라고 부름.
+		</div>
+	</footer>
+
+
+	<!-- local js/css -->
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
+

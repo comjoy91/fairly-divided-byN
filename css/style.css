@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+
+html {
+	font-size: 12px; /* 1rem = this size. */
+	font-family: 'SpoqaHanSans',sans-serif;
+	line-height: 1.5;
+	font-style: normal;
+	font-weight: 400;
+	position: relative;
+}
+body {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	width: 100vw;
+	height: 100vh;
+
+	overflow: hidden;
+}
+div, input {
+	box-sizing: border-box;
+}
+
+#square_background {
+	width: 86%;
+	height: 100%;
+	margin: 0 0 0 0;
+
+	position: absolute;
+	left: 7%;
+}
+
+	#grdpBox_cover {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		height: 110%;
+	}
+
+		.grand_province {
+			display: flex;
+			align-items: center;
+		}
+
+			.grdpBox {
+				display: inline-block;
+				margin: 0 0 0 0;
+
+				transition-property: width, height, background-color;
+				transition-duration: 1s, 1s, 0.3s;
+				transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+			}
+
+			#grand_capital .grdpBox { background-color: #CC293D; }
+			#grand_gangwon .grdpBox { background-color: #FFC800; }
+			#grand_chungcheong .grdpBox { background-color: #00A032; }
+			#grand_jeolla .grdpBox { background-color: #56A6E1; }
+			#grand_TK .grdpBox { background-color: #485ABC; }
+			#grand_PK .grdpBox { background-color: #854FA9; }
+			#grand_jeju .grdpBox { background-color: #FE72BA; }
+
+			#grand_capital .grdpBox.grayColour,
+			#grand_gangwon .grdpBox.grayColour,
+			#grand_chungcheong .grdpBox.grayColour,
+			#grand_jeolla .grdpBox.grayColour,
+			#grand_TK .grdpBox.grayColour,
+			#grand_PK .grdpBox.grayColour,
+			#grand_jeju .grdpBox.grayColour { background-color: #D8D8D8; }
+
+
+	.horizontalBar {
+		width: 100%;
+		height: 8px;
+
+		position: relative;
+		left: 0;
+		top: calc(50% - 4px);
+
+		background-color: transparent;
+
+		/*transition-property: width, height, top, left;
+		transition-duration: 0.3s;
+		transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);*/
+	}
+		.horizontalBar_upper {
+			width: 100%;
+			height: 50%;
+
+			border-style: none solid solid solid;
+			border-width: 1px;
+		}
+		.horizontalBar_lower {
+			width: 100%;
+			height: 50%;
+
+			border-style: none solid none solid;
+			border-width: 1px;
+		}
+		#horizontalBar_total {
+			position: absolute;
+			top: calc(55% - 4px);
+		}
+	.number_n {
+		width: -webkit-max-content;
+		word-break: keep-all;
+		text-align: center;
+		font-weight: 600;
+		color: #FFFFFF;
+
+		/*position: absolute;*/ position: relative;
+		top: calc(50% + 1.5em - 8px);
+
+		z-index: 100;
+
+		background-color: rgba(0, 0, 0, 0.65);
+	}
+		.number_n.rotate45 {
+			transform: rotate(-45deg);
+			top: calc(50% - 1.5em); 
+		}
+
+		#number_n_total {
+			position: absolute;
+			top: calc(55% + 1.5em);
+		}
+
+	.verticalBar {
+		width: 5px;
+		height: 0;
+
+		position: absolute;
+		left: 4%;
+		top: 0;
+
+		background-color: transparent;
+		border-width: 3px;
+
+		/*transition-property: width, height, top, left;
+		transition-duration: 0.3s;
+		transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);*/
+	}
+
+		.verticalBar.heightOnLeft {
+			border-style: solid none solid solid;
+		}
+		.verticalBar.heightOnRight {
+			border-style: solid solid solid none;
+		}
+
+	#number_grdpPerUnit {
+		width: auto;
+		word-break: keep-all;
+		text-align: left;
+		font-weight: 600;
+
+		position: absolute;
+		left: 0;
+		top: calc(55% - 1.5em);
+	}
+
+
+#headerMenu {
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	background-color: rgba(0, 0, 0, 0.05);
+
+	width: 100%;
+    height: 24%;
+    padding-top: 6vh;
+    padding-bottom: 4vh;
+}
+
+	#sentence {
+		position: absolute;
+
+		width: 55%;
+		height: 20%;
+		padding: 0 3% 0 7%;
+	}
+
+		#quote {
+			position: static;
+			margin: 0 0 0.48em 0;
+
+			font-size: 33px;
+		    text-indent: -0.48em;
+		}
+
+			highlight {
+				background-color: #333333;
+				color: #FFFFFF;
+			}
+
+		#staticsName {
+			font-weight: 600;
+		}
+
+		#grdp_button {
+			margin: 8px 0 0 0;
+			color: rgba(0, 0, 0, 0.3);
+			text-decoration: underline;
+
+			cursor: pointer;
+		}
+
+	#menuIcon_container {
+		position: relative;
+		left: 55%;
+
+		width: 38%;
+		height: 100%;
+
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+		.menuIcon {
+			margin: 0 0 calc(30px - 1.5em) 18px;
+			padding: 0 0 0 0;
+			min-width: 60px;
+			height: 1.5em;
+			text-align: right;
+
+			cursor: pointer;
+		}
+
+			.menuIcon:hover, .menuIcon.selected {
+				color: #FFFFFF;
+				background-color: #000000;
+				font-weight: 400;
+			}
+
+
+footer {
+	position: absolute;
+	left: 10%;
+	top: 90%;
+
+	width: 80%;
+
+	text-align: center;
+	font-size: 12px;
+	font-weight: 400;
+	color: #CCCCCC;
+}
+	footer div {
+		position: static;
+	}
+
+	footer a {
+		color: #CCCCCC;
+	}
