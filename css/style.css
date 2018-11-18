@@ -2,7 +2,7 @@
 
 
 html {
-	font-size: 12px; /* 1rem = this size. */
+	font-size: 1vh; /* original: 12px */ /* 1rem = this size. */
 	font-family: 'SpoqaHanSans',sans-serif;
 	line-height: 1.5;
 	font-style: normal;
@@ -110,6 +110,7 @@ div, input {
 
 		/*position: absolute;*/ position: relative;
 		top: calc(50% + 1.5em - 8px);
+		padding: 1px 4px 2px 4px;
 
 		z-index: 100;
 
@@ -185,7 +186,7 @@ div, input {
 			position: static;
 			margin: 0 0 0.48em 0;
 
-			font-size: 33px;
+			font-size: 2.75rem; /* original: 33px; */
 		    text-indent: -0.48em;
 		}
 
@@ -220,7 +221,7 @@ div, input {
 	}
 
 		.menuIcon {
-			margin: 0 0 calc(30px - 1.5em) 18px;
+			margin: 0 0 calc(2.33rem - 1.5em) 18px; /* original margin-bottom: calc(30px - 1.5em)*/
 			padding: 0 0 0 0;
 			min-width: 60px;
 			height: 1.5em;
@@ -244,7 +245,7 @@ footer {
 	width: 80%;
 
 	text-align: center;
-	font-size: 12px;
+	font-size: 1rem; /* original: 12px; */
 	font-weight: 400;
 	color: #CCCCCC;
 }
