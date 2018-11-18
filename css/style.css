@@ -221,7 +221,7 @@ div, input {
 	}
 
 		.menuIcon {
-			margin: 0 0 calc(2.33rem - 1.5em) 18px; /* original margin-bottom: calc(30px - 1.5em)*/
+			margin: 0 0 calc(14vh/5 - 1.5em) 18px; /* original margin-bottom: calc(30px - 1.5em)*/
 			padding: 0 0 0 0;
 			min-width: 60px;
 			height: 1.5em;
